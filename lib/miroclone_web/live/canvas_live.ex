@@ -12,6 +12,8 @@ defmodule MiroCloneWeb.CanvasLive do
 
     Process.send_after(self(), :ping, 1000)
 
+    socket = assign(socket, :page_title, "Hello world this is canvas")
+
     {:ok, assign(socket, :temperature, temperature)}
   end
 
